@@ -1,0 +1,91 @@
+@import 'normalize.css';
+
+$blue: #39BAE6;
+$grey: #3D424D;
+$shadow: 1px 6px 16px rgba(0, 0, 0, 0.22);
+$white: #FAFAFA;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $grey;
+  color: $white;
+  font-family: "Anonymous Pro", monospace;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline
+  }
+}
+
+.container--logos {
+  display: flex;
+    flex-wrap: wrap;
+  overflow: hidden;
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  z-index: -1;
+
+  &::after {
+    background: rgba(0, 0, 0, 0.42);
+    content: "";
+    position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    z-index: 0;
+  }
+}
+
+.scrolling-logo {
+  margin: 0.5rem 0;
+  width: 100%;
+
+  &:nth-child(even) {
+    display: none;
+  }
+
+  img {
+    shadow: $shadow;
+    max-width: 150px;
+    padding: 1rem;
+  }
+}
+
+@keyframes travel {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 620px) {
+  .scrolling-logo {
+    width: 33%;
+
+    &:nth-child(even) {
+      display: block;
+    }
+  }
+}
