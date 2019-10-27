@@ -6,7 +6,7 @@
   "scripts": {
     "test": "parcel serve index.html",
     "build": "parcel build index.html",
-    "dev": "parcel watch index.html",
+    "dev": "concurrently \"parcel watch index.html\" \"parcel serve index.html\"",
     "clean": "rm -rf .cache && rm -rf dist"
   },
   "keywords": [
@@ -18,6 +18,7 @@
   "author": "Brandon Ubben",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^5.0.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.23.0",
     "typed.js": "^2.0.11"
