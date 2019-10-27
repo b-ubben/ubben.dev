@@ -48,7 +48,7 @@ ul {
   line-height: 1.69rem;
   margin: 0 auto;
   max-width:  960px;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .container__header {
@@ -68,7 +68,7 @@ ul {
 }
 
 .container__header__social-media-list {
-  padding: 1rem 0 1rem 2rem;
+  padding: 1rem;
 
   li {
     display: inline-block;
@@ -197,6 +197,7 @@ ul {
 
   .container {
     line-height: 2.15rem;
+    padding: 1rem;
   }
 
   .container__header__social-media-list {
